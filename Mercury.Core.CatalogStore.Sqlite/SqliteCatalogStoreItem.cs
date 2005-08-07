@@ -87,6 +87,7 @@ namespace Mercury.Core.CatalogStore.Sqlite
 				return _uri;
 			}
 			set {
+				Load();
 				_uri = value;
 				UpdateElement(StoreItemElements.Uri);
 			}
@@ -98,6 +99,7 @@ namespace Mercury.Core.CatalogStore.Sqlite
 				return _title;
 			}
 			set {
+				Load();
 				_title = value;
 				UpdateElement(StoreItemElements.Title);
 			}
@@ -109,6 +111,7 @@ namespace Mercury.Core.CatalogStore.Sqlite
 				return _type;
 			}
 			set {
+				Load();
 				_type = value;
 				UpdateElement(StoreItemElements.Type);
 			}
@@ -150,6 +153,7 @@ namespace Mercury.Core.CatalogStore.Sqlite
 				return _parent;
 			}
 			set {
+				Load();
 				this.Parent = (SqliteCatalogStoreItem)value;
 			}
 		}
@@ -160,6 +164,7 @@ namespace Mercury.Core.CatalogStore.Sqlite
 				return _aliasOf;
 			}
 			set {
+				Load();
 				this.AliasOf = (SqliteCatalogStoreItem)value;
 			}
 		}
@@ -192,6 +197,7 @@ namespace Mercury.Core.CatalogStore.Sqlite
 				return _parent;
 			}
 			set {
+				Load();
 				_parent = value;
 				UpdateElement(StoreItemElements.Parent);
 			}
@@ -215,6 +221,7 @@ namespace Mercury.Core.CatalogStore.Sqlite
 					//for this item.  Therefore, do not attempt to optimize
 					//by detecting when _aliasOf and value are the same and doing
 					//nothing as a result.
+					Load();
 					if (_aliasOf != null && _aliasOf != value) {
 						_aliasOf.Aliases.Remove(this);
 					}

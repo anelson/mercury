@@ -290,7 +290,7 @@ namespace Mercury.Core.CatalogStore.Sqlite
 				
 				//If any of the simple elements of the catalog_items table have
 				//changed, update them.  It's easier to just update them all
-				if ((updatedElements & (StoreItemElements.Tags | 
+				if ((updatedElements & (StoreItemElements.Title | 
 										StoreItemElements.Uri | 
 										StoreItemElements.Type |
 										StoreItemElements.AliasOf | 

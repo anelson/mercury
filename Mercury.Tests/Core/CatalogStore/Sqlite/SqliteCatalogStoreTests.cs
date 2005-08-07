@@ -260,6 +260,14 @@ namespace Mercury.Tests.Core.CatalogStore.Sqlite
 			Assert.IsTrue(_store.ItemExists(itemAChild2.Id));
 			Assert.IsTrue(_store.ItemExists(itemAChild3.Id));
 
+			Assert.IsTrue(rootItem.Children.Contains(level1ItemA));
+			Assert.IsTrue(rootItem.Children.Contains(level1ItemB));
+			Assert.IsTrue(rootItem.Children.Contains(level1ItemC));
+			Assert.IsTrue(level1ItemA.Aliases.Contains(level1ItemAAlias));
+			Assert.IsTrue(level1ItemA.Children.Contains(itemAChild1));
+			Assert.IsTrue(level1ItemA.Children.Contains(itemAChild2));
+			Assert.IsTrue(level1ItemA.Children.Contains(itemAChild3));
+
             //Remove item a.  This should cascade delete item a's alias,
 			//and item a's 3 children, but leave the root, b, and c.
 			_store.RemoveItem(level1ItemA);

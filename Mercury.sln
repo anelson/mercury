@@ -1,12 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 8.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mercury.Core", "Mercury.Core\Mercury.Core.csproj", "{2561E961-8987-4C57-821B-4C413E06DFE2}"
-	ProjectSection(ProjectDependencies) = postProject
-		{521723AF-CB8E-4892-B98D-797799FF68FC} = {521723AF-CB8E-4892-B98D-797799FF68FC}
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mercury.Tests", "Mercury.Tests\Mercury.Tests.csproj", "{6F9B4658-1A7B-4A15-B0E5-C449B04B5BB7}"
 	ProjectSection(ProjectDependencies) = postProject
-		{2561E961-8987-4C57-821B-4C413E06DFE2} = {2561E961-8987-4C57-821B-4C413E06DFE2}
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLite.NET", "SQLite.NET\CSharpSources\SQLite.NET\SQLite.NET.csproj", "{07BEA172-E9A8-4229-9D40-41BAE1246314}"
@@ -24,7 +18,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mercury.Util", "Mercury.Uti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mercury.Core.CatalogStore.Sqlite", "Mercury.Core.CatalogStore.Sqlite\Mercury.Core.CatalogStore.Sqlite.csproj", "{0583CB14-3CEF-4D05-AEB1-1B18A480F9D4}"
 	ProjectSection(ProjectDependencies) = postProject
-		{2561E961-8987-4C57-821B-4C413E06DFE2} = {2561E961-8987-4C57-821B-4C413E06DFE2}
 		{07BEA172-E9A8-4229-9D40-41BAE1246314} = {07BEA172-E9A8-4229-9D40-41BAE1246314}
 		{521723AF-CB8E-4892-B98D-797799FF68FC} = {521723AF-CB8E-4892-B98D-797799FF68FC}
 	EndProjectSection
@@ -35,10 +28,6 @@ Global
 		Release = Release
 	EndGlobalSection
 	GlobalSection(ProjectConfiguration) = postSolution
-		{2561E961-8987-4C57-821B-4C413E06DFE2}.Debug.ActiveCfg = Debug|.NET
-		{2561E961-8987-4C57-821B-4C413E06DFE2}.Debug.Build.0 = Debug|.NET
-		{2561E961-8987-4C57-821B-4C413E06DFE2}.Release.ActiveCfg = Release|.NET
-		{2561E961-8987-4C57-821B-4C413E06DFE2}.Release.Build.0 = Release|.NET
 		{6F9B4658-1A7B-4A15-B0E5-C449B04B5BB7}.Debug.ActiveCfg = Debug|.NET
 		{6F9B4658-1A7B-4A15-B0E5-C449B04B5BB7}.Debug.Build.0 = Debug|.NET
 		{6F9B4658-1A7B-4A15-B0E5-C449B04B5BB7}.Release.ActiveCfg = Release|.NET
